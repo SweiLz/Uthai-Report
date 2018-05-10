@@ -1,0 +1,73 @@
+\subsection{ออกแบบสถาปัตยกรรมของหุ่นยนต์}
+หลักการออกแบบสถาปัตยกรรมของหุ่นยนต์ฮิวมานอยด์ UTHAI จะออกแบบระบบให้อยู่บนระบบพื้นฐาน ROS
+เนื่องจากการใช้กรอบการทำงานที่มีประสิทธิภาพ และความยืดหยุ่นสูง จะช่วยทำให้สามารถปรับเปลี่ยนระบบการควบคุมของหุ่นยนต์ฮิวมานอยด์ได้ง่ายและรวดเร็ว
+ดังนั้นแล้วผู้วิจัยจึงได้แบ่งการประมวลผลออกเป็น 2 ส่วนคือ
+\begin{enumerate}[label=\arabic*, leftmargin=1.5cm]\setlength\itemsep{-0.25em}
+	\item หน่วยประมวลผลควบคุมระดับสูง (High Level Controller)
+	\item หน่วยประมวลผลควบคุมระดับต่ำ (Low Level Controller)
+\end{enumerate}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{chapter3/images/uthai_argitec.png}
+	\caption{สถาปัตยกรรมของหุ่นยนต์ฮิวมานอยด์ UTHAI}
+	\label{fig:uthai_argitec}
+\end{figure}
+
+\clearpage
+\subsubsection{หน่วยประมวลผลควบคุมระดับสูง (High level controller)}
+ระบบควบคุมหลักของหุ่นยนต์ UTHAI นั้นจะอยู่ที่หน่วยประมวลผลขั้นสูง ใช้เป็นบอร์ดคอมพิวเตอร์ ODROID-XU4 ตัวประมวลผลหลักนี้
+มีหน้าที่ในการทำการคำนวณ เส้นทางการเดินของหุ่นยนต์ให้มีเสถียรภาพ ตรวจการขัดกันของโครงสร้างของหุ่นยนต์
+รวมไปถึงรับค่าข้อมูลภาพจากกล้อง และข้อมูลเสียงจากไมโครโฟนมาประมวลผล หลังจากนั้นจะทำการนำค่าทั้งหมดที่ได้จากการคำนวณ
+มาแปลงให้อยู่ในรูปของชุดข้อมูล แล้วส่งออกไปให้ระบบกลาง (ROS) ในการส่งต่อไปให้อุปกรณ์อื่นต่อไป
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.45\textwidth]{chapter3/images/odroid_xu4.jpeg}
+	\caption{บอร์ดคอนโทรลเลอร์ Odroid XU4}
+	\label{fig:controller_xu4}
+\end{figure}
+
+\subsubsection{หน่วยประมวลผลควบคุมระดับต่ำ (Low level controller)}
+ระบบควบคุมขั้นต่ำเป็นหน่วยประมวลผลที่รองลงมาจาก บอร์ดคอมพิวเตอร์ โดยใช้บอร์ดไมโครคอลโทรเลอร์ Nucleo F411RE
+เป็นหน่วยประมวลผลขั้นต่ำ สำหรับในการติดต่อกับอุปกรณ์อิเล็กทรอนิกส์ต่าง ๆ ที่อยู่ภายในตัวของหุ่นยนต์ เช่น
+ค่าเซนเซอร์ที่ฝ่าเท้าซึ่งสามารถบอกได้ว่าควรใช้สมการไหนในการคำนวณพลวัต หรือค่าของเซนเซอร์ IMU มีความสำคัญมาก
+ในการทำให้หุ่นยนต์ฮิวมานอยด์เดินได้อย่างมีเสถียรภาพ เมื่ออ่านค่าเซนเซอร์ต่างๆได้แล้ว
+หน่วยประมวลผลขั้นต่ำจะนำค่าที่ได้จากการอ่านเซนเซอร์เหล่านี้แปลงให้อยู่ในลักษณะของชุดข้อมูล แล้วส่งออกไปในระบบกลาง(ROS)
+นอกเหนือจากนี้หน่วยประมวลผลขั้นต่ำยังทำหน้าที่รับค่าคำสั่งมาจากระบบกลาง ในการสั่งงานให้หุ่นยนต์มีท่าทางต่าง ๆตามต้องการได้
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.45\textwidth]{chapter3/images/nucleo_f411re.jpeg}
+	\caption{บอร์ดคอนโทรลเลอร์ Nucleo F411RE}
+	\label{fig:controller_f411re}
+\end{figure}
+
+
+\clearpage
+
+
+
+\subsection*{UTHAI-Tools}
+เครื่องมือสำหรับการทำงานในฮิวมานอยด์
+
+\subsubsection*{sketch-lib}
+เป็นเครื่องมือที่ใช้สำหรับเอาไว้วาดรูปเฟรมของหุ่นยนต์
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{chapter3/images/basic-shapes.png}
+	\caption{ภาพตัวอย่างการวาดออฟเจ็คต่างๆ}
+	\label{fig:basic-shapes_sk}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{chapter3/images/test_robot.png}
+	\caption{ภาพตัวอย่างการวาดเฟรมของแขนกล}
+	\label{fig:test-robot_sk}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{chapter3/images/uthai_kinematics.png}
+	\caption{ภาพตัวอย่างการวาดเฟรมของหุ่นยนต์ฮิวมานอยด์}
+	\label{fig:uthai_kinematics_sk}
+\end{figure}

@@ -1,0 +1,189 @@
+\documentclass{classes/fiboThesis}
+
+\begin{document}
+
+\title{Structure Design and Platform Development of Universal Template\break for Humanoid Algorithm Interface (UTHAI)}
+\titleTH{การออกแบบโครงสร้างและพัฒนาระบบพื้นฐานสำหรับหุ่นยนต์ฮิวมานอยด์\break เพื่อการศึกษาและวิจัย}
+
+\author{นายจิรัฏฐ์ ศรีรัตนอาภรณ์}
+\authorTwo{นายเจษฎากร ทาไชยวงค์}
+\authorThree{นายวุฒิภัทร โชคอนันตทรัพย์}
+
+\majoradvisor{นายธนัชชา ชูพจน์เจริญ}
+\coadvisor{รศ.ดร.ชิต เหล่าวัฒนา}
+\committeeOne{ดร.อาบทิพย์ ธีรวงศ์กิจ}
+\committeeTwo{ดร.ปิติวุฒญ์ ธีรกิตติกุล}
+\committeeThree{ดร.สุภชัย วงศ์บุณย์ยง}
+
+\academicyearTH{2560}
+
+\maketitle
+\frontmatter
+\maketitleinner
+\makeapproval
+\input{pages/abstract}
+\input{pages/acknowledgements}
+\tableofcontents
+\listoffigures
+\listoftables
+\input{pages/symbols}
+\input{pages/abbreviations}
+
+\mainmatter
+\input{chapter1/chapter1}
+\input{chapter2/chapter2}
+\input{chapter3/chapter3}
+% \input{chapter4/chapter4}
+% \input{chapter5/chapter5}
+
+% \chapter{เชปเตอร์}
+% {
+% 	This an \textit{example} of document compiled with 
+% 	\textbf{xelatex} compiler. If you have to write 
+% 	some code และยังพิมพ์ภาษาไทยได้ด้วย
+% 	This an \textit{example} of document compiled with 
+% 	\textbf{xelatex} compiler. If you have to write 
+% 	some code และยังพิมพ์ภาษาไทยได้ด้วยว่ายังไงต่อจากนี้ไป
+% 	\section{เซคชั่น}
+% 	{
+% 		เนื้อหาเซคชั่น
+% 	}
+% 	\section{เซคชั่น}
+% 	{
+% 		เนื้อหาเซคชั่น
+				
+				
+% 		\begin{figure}[ht]
+% 			\centering
+% 			\includegraphics[width=0.5\textwidth]{Images/maplestory_1.jpg}
+% 			\caption{Example of a parametric plot ($\sin (x), \cos(x), x$)}
+% 		\end{figure}
+				
+	
+					
+% 		\subsection{ซับเซคชั่น}
+% 		{
+% 			เนื้อหาซับเซคชั่น		
+% 			\subsubsection{ซับซับเซคชั่น}
+% 			{
+% 				เนื้อหาซับซับเซคชั่น
+												                
+% 				ทดสอบการใส่ Code ภาษา Python พิมพ์ใหม่
+% 				% 
+% 				\begin{Verbatim}
+% My black output
+% that it can be
+% many lines long
+% but this specific
+% and the following 2
+% lines are important so they
+% need to be highlighted and bold
+% 				\end{Verbatim}
+% 				\begin{Verbatim}
+% import numpy as np
+% print("Hello World")
+% 				\end{Verbatim}
+																
+% 				ทดสอบการใส่ Code ภาษา C 
+% 				\begin{Verbatim}	
+% 	#include <stdio.h>
+% 	int main()
+% 	{
+% 		printf("Hello World");
+% 		return 0;
+% 	}
+% 				\end{Verbatim}
+% 				\begin{Verbatim}
+% % dskfaosdlfk
+% #include <stdio.h>
+% int main()
+% {
+% 	printf("Hello World");
+% 	return 0;
+% }
+% 				\end{Verbatim}
+
+
+% 				\begin{Verbatim}
+% import numpy as np
+	
+% def incmatrix(genl1,genl2):
+% 	m = len(genl1)
+% 	n = len(genl2)
+% 	M = None #to become the incidence matrix
+% 	VT = np.zeros((n*m,1), int)  #dummy variable
+	
+% 	#compute the bitwise xor matrix
+% 	M1 = bitxormatrix(genl1)
+% 	M2 = np.triu(bitxormatrix(genl2),1) 
+	
+% 	for i in range(m-1):
+% 		for j in range(i+1, m):
+% 			[r,c] = np.where(M2 == M1[i,j])
+% 			for k in range(len(r)):
+% 				VT[(i)*n + r[k]] = 1;
+% 				VT[(i)*n + c[k]] = 1;
+% 				VT[(j)*n + r[k]] = 1;
+% 				VT[(j)*n + c[k]] = 1;
+	
+% 				if M is None:
+% 					M = np.copy(VT)
+% 				else:
+% 					M = np.concatenate((M, VT),1)
+	
+% 				VT = np.zeros((n*m,1), int)
+	
+% 	return M
+% 					\end{Verbatim}
+					
+					
+% 				\paragraph{พารากราฟ}
+% 				{
+% 					เนื้อหาพารากราฟ
+% 					\subparagraph{ซับพารากราฟ}
+% 					{
+% 						เนื้อหาซับพารากราฟ
+% 					}
+% 					\subparagraph{ซับพารากราฟ/2}
+% 					{
+% 						เนื้อหาซับพารากราฟ /2
+% 					}
+% 				}
+% 				\paragraph{พารากราฟ /2}
+% 				{
+% 					เนื้อหาพารากราฟ /2
+% 				}
+% 			}
+% 			\subsubsection{ซับซับเซคชั่น /2}
+% 			{
+% 				เนื้อหาซับซับเซคชั่น /2
+% 			}	
+% 		}
+% 		\subsection{ซับเซคชั่น /2}
+% 		{
+% 			เนื้อหาซับเซคชั่น /2
+			
+% 		}
+% 	}
+% 	\section{เซคชั่น /2}
+% 	{
+% 		เนื้อหาเซคชั่น /2
+% 	}
+% }
+% \chapter{เชปเตอร์ /2}
+% {
+% 	เนื้อหาเชปเตอร์ /2
+	
+% }
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{pages/reference}
+\addcontentsline{toc}{chapter}{เอกสารอ้างอิง}
+\begin{appendices}
+	\input{pages/appendix1}
+	\input{pages/appendix2}
+\end{appendices}
+
+\end{document}
