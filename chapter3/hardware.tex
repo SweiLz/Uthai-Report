@@ -77,7 +77,27 @@
 	\caption{ตารางแสดงสมบัติทางกลของวัสดุพลาสติก}
 	\label{tab:plastic_material_properties}
 \end{table}
+แต่เนื่องจากว่าในปัจจุบันนี้เครื่องพิมพ์ส่วนมากจะไม่รองรับการพิมพ์ชิ้นงานที่มีขนาดใหญ่ ซึ่งมีขนากมากกว่า
+30x30x30 ซม.(กว้างxยาวxสูง) ดังนั้นชิ้นงานที่ขึ้นรูปที่มีขนาดใหญ่เกินกว่านี้อาจจะต้องทำการตัดชิ้นงานออกก่อน
+แล้วจึงค่อยนำมาประกอบรวมกันทีหลังอีกครั้งหนึ่ง โดยพื้นที่ทำการพิมพ์ของเครื่องพิมพ์ 3 มิติที่มีวางจำหน่าย
+และใช้งานแพร่หลายในท้องตลาดแสดงดังตาราง\ref{tab:3dprint_space} \footnote{The truth about 3D printer maximum print areas [https://www.zdnet.com/article/what-manufacturers-dont-want-you-to-know-the-truth-about-3d-printer-maximum-print-areas/]}
 
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{| l | l | l | l |}
+		\hline
+		Printer & Actual Width & Actual Depth & Actual Height \\
+        \hline
+        MakerBot Replicator+ & 292 & 192 & 165 \\
+        Ultimaker 3 & 188 & 185 & 200 \\
+        LulzBot Mini & 152 & 152 & 158 \\
+        Dreammaker Overlord Pro Plus & 79 & 79 & 255 \\
+        New Matter MOD-t & 145 & 95 & 125 \\
+	    \hline
+	\end{tabular}
+	\caption{ตารางแสดงขนาดของชิ้นงานที่สามารถพิมพ์ได้ในเครื่องพิมพ์ชนิดต่างๆ}
+	\label{tab:3dprint_space}
+\end{table}
 
 
 \subsection{การเชื่อมต่อหุ่นยนต์ฮิวมานอยด์}
@@ -156,23 +176,36 @@ USB2Dynamixel ได้แบ่งการติดต่อสื่อสา
     \label{fig:useusb2dynamixel}
 \end{figure}
 
+\clearpage
 \subsubsection*{Inertial Measurement Unit (IMU)}
 ในการทำวิจัยครั้งนี้ผู้จัดทำได้เลือกนำเซนเซอร์ MPU-9250 มาใช้ในการอ่านค่ามุมเอียงของหุ่นยนต์เพื่อใช้ในการคุมเสถียรภาพของหุ่นยนต์
 โดยเซนเซอร์ตัวนี้สามารถวัดค่าได้ 9 แกนคือ วัดค่าความเร็วเชิงมุม(gyroscope) 3 แกน วัดค่าความเร่งเชิงเส้น(accelerometer) 3 แกน
 และวัดค่าสนามแม่เหล็กโลก({magnetometer) 3 แกน ซึ่งเซนเซอร์ตัวนี้จะติดตั้งบริเวณส่วนของลำตัวหุ่นยนต์
 เนื่องจากว่าจะเป็นจุดที่สามารถบ่งบอกได้ถึงการเคลื่อนที่และมุมเอียงของหุ่นยนต์ในขณะนั้นได้ดีที่สุด\footnote{ MPU-9250 [http://www.arduiner.com/en/gy-series-axis-accellerometers/6924-gy9255-mpu9255-sensor-module-alternative-mpu9150-mpu9250-3809200640200.html] }
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.2\textwidth]{chapter3/images/mpu9250.jpeg}
     \caption{แสดงเซนเซอร์ IMU MPU9250}
     \label{fig:mpu9250}
 \end{figure}
 
+\subsubsection*{Wi-Fi Adapter}
+ตัวรับสัญญาณ wifi ชนิดพกพาเพื่อใช้ในการติดต่อสื่อสารระหว่างคอมพิวเตอร์และบอร์ดควบคุม ซึ่งในโครงงานนนี้
+จะใช้ส่งข้อมูลที่ต้องการ การประมวลผลบนคอมพิวเตอร์เช่น การวางแผนการเดิน การคำนวนเรื่องพลศาสตร์ของหุ่นยนต์
+โดยจะมีตัวกลางในการรับส่งสัญาณผ่านตัวกระจายสัญญาณ(wifi router) 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.3\textwidth]{chapter3/images/rpi_wifi_adaptor.jpg}
+    \caption{ตัวรับสัญญาณ wifi ของ RaspberryPi}
+    \label{fig:rpi_wifi_adaptor}
+\end{figure}
+
+\clearpage
 \subsubsection*{Ground contact sensor}
 เซนเซอร์ตรวจหน้าสัมผัสที่พื้นเป็นเซนเซอร์ที่ถูกติดตั้งบริเวณฝ่าเท้า เพื่อตรวจสอบการเดินของหุ่นยนต์ฮิวมานอยด์ว่าขณะนี้มีการสัมผัสของฝ่าเท้าของหุ่นยนต์กับพื้นหรือไม่ 
 ซึ่งในงานวิจัยนี้ได้ใช้หลักการตัวตรวจจับแรงกดแบบค่าความต้านทานหรือ Force Sensing Resistor (FSR) ที่ใช้เทคโนโลยีฟิล์มโพลีเมอร์แบบหนา (Polymer Thick Film) 
 โดยแรงดันไฟฟ้าที่ตกคร่อมตัวตรวจจับจะลดลง เมื่อมีแรงกดมากระทำบนแผ่นตรวจจับ มีโครงสร้างของตัวตรวจจับแสดงในรูปที่\ref{fig:FSRarchitec}
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\textwidth]{chapter3/images/FSRarchitec.jpg}
     \caption{ลักษณะโครงสร้างของตัวตรวจจับแรงกด FSR}
@@ -182,23 +215,12 @@ USB2Dynamixel ได้แบ่งการติดต่อสื่อสา
 ประกอบด้วยแผ่นสารกึ่งตัวนำแบบอ่อนที่เป็นตัวกำหนดค่าความต้านทานไฟฟ้าประกบ เข้ากับแผ่นขั้วไฟฟ้าแบบอ่อน โดยมีแผ่นฉนวนแบบอ่อนคั่นกลาง 
 ทำให้เกิดค่าความต้านทานไฟฟ้าขึ้นระหว่างขาต่อใช้งาน เมื่อมีการกดลงบนแผ่นขั้วนำไฟฟ้า จะทำให้เกิดการสัมผัสระหว่างสารกึ่งตัวนำกับขั้วไฟฟ้า
 ส่งผลให้ค่าความต้านทานไฟฟ้าเกิดการเปลี่ยนแปลง ดังแสดงกระบวนการทำงานในรูปที่\ref{fig:fig:FSRfunction}
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=1.0\textwidth]{chapter3/images/FSRfunction.jpg}
+    \includegraphics[width=0.5\textwidth]{chapter3/images/FSRfunction.jpg}
     \caption{การทำงานของตัวตรวจจับแรงกด FSR}
     \label{fig:FSRfunction}
 \end{figure}
 
 
-\subsubsection*{Wi-Fi Adapter}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.3\textwidth]{chapter3/images/rpi_wifi_adaptor.jpg}
-    \caption{ตัวรับสัญญาณ wifi ของ RaspberryPi}
-    \label{fig:rpi_wifi_adaptor}
-\end{figure}
-
-ตัวรับสัญญาณ wifi ชนิดพกพาเพื่อใช้ในการติดต่อสื่อสารระหว่างคอมพิวเตอร์และบอร์ดควบคุม ซึ่งในโครงงานนนี้
-จะใช้ส่งข้อมูลที่ต้องการ การประมวลผลบนคอมพิวเตอร์เช่น การวางแผนการเดิน การคำนวนเรื่องพลศาสตร์ของหุ่นยนต์
-โดยจะมีตัวกลางในการรับส่งสัญาณผ่านตัวกระจายสัญญาณ(wifi router) 
 
