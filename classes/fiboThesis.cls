@@ -24,6 +24,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{ifthen} %% สำหรับใช้ if-else
+
 \usepackage{verbatim} %% สำหรับใส่ Code programming
 \usepackage{graphicx} %% สำหรับใส่ รูปภาพ
 \usepackage[hidelinks]{hyperref} %% สำหรับใส่ URL
@@ -38,6 +39,7 @@
 \usepackage{titletoc} %% สำหรับจัดหน้าสารบัญ
 \usepackage{tikz} %% สำหรับวาดแผนภาพต่างๆ
 \usepackage{atbegshi} %% สำหรับทำสารบัญให้มี (ต่อ)
+
 \usepackage{fancyvrb} %% สำหรับสร้างกล่อง Code
 \fvset{frame=single,framesep=1mm,framerule=0.5mm}
 % \usepackage{lipsum}
@@ -155,12 +157,14 @@
     \renewcommand{\ContentsHeaderContinued}{}
 }
 
+
 \renewcommand{\listoffigures}{
     \AtBeginShipout{\LofHeaderContinued}
 	\cleardoublepage
 	\begingroup
 	\ContentsHeader{\listfigurename}{}{\contenttopfigure}{\contenttoppage}
 	\addcontentsline{toc}{chapter}{\listfigurename}
+	\renewcommand{\baselinestretch}{-1.0} 
 	\@starttoc{lof}
     \endgroup
     \renewcommand{\LofHeaderContinued}{}
@@ -171,6 +175,7 @@
 	\begingroup
 	\ContentsHeader{\listtablename}{}{\contenttoptable}{\contenttoppage}
 	\addcontentsline{toc}{chapter}{\listtablename}
+	\renewcommand{\baselinestretch}{-1.0}
 	\@starttoc{lot}
     \endgroup
     \renewcommand{\LotHeaderContinued}{}
