@@ -1,6 +1,14 @@
 \documentclass{classes/fiboThesis}
+%remove space between chapter
+\usepackage{wrapfig} %% สำหรับแทรกรูปกับตัวอักษร
+\usepackage{etoolbox}
+\preto\figure{%
+  \ifnum\value{figure}=0\addtocontents{lof}{{\vskip-10pt}}\fi
+}
+\preto\table{%
+  \ifnum\value{table}=0\addtocontents{lot}{{\vskip-10pt}}\fi
+}
 
-%\setlength\cftbeforetabskip{-5pt}
 \begin{document}
 \title{Structure Design and Platform Development of Universal Template\break for Humanoid Algorithm Interface (UTHAI)}
 \titleTH{การออกแบบโครงสร้างและพัฒนาระบบพื้นฐานสำหรับหุ่นยนต์ฮิวมานอยด์\break เพื่อการศึกษาและวิจัย}
@@ -24,6 +32,7 @@
 \makeapproval
 \input{pages/abstract}
 \input{pages/acknowledgements}
+
 \tableofcontents
 \listoffigures
 \listoftables
@@ -37,28 +46,15 @@
 \input{chapter4/chapter4}
 \input{chapter5/chapter5}
 
-% 				\begin{Verbatim}
-% import numpy as np
-% print("Hello World")
-% 				\end{Verbatim}
-																
-% 				ทดสอบการใส่ Code ภาษา C 
-% 				\begin{Verbatim}	
-% 	#include <stdio.h>
-% 	int main()
-% 	{
-% 		printf("Hello World");
-% 		return 0;
-% 	}
-% 				\end{Verbatim}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{pages/reference}
+%\addcontentsline{toc}{chapter}{เอกสารอ้างอิง}
+%\begin{appendices}
+%	\input{pages/appendix1}
+%	\input{pages/appendix2}
+%\end{appendices}
 
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{pages/reference}
-\addcontentsline{toc}{chapter}{เอกสารอ้างอิง}
-\begin{appendices}
-	\input{pages/appendix1}
-	\input{pages/appendix2}
-\end{appendices}
+\input{pages/vitea}
 
 \end{document}

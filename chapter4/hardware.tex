@@ -1,4 +1,4 @@
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=0.2\textwidth]{chapter4/images/UTHAI_ver_1.jpg}
     \caption{โครงสร้างหุ่นยนต์ในโปรแกรม 3 มิติ}
@@ -36,7 +36,7 @@
 เป็นจำนวน 2 ส่วนในแต่ละในก้านต่อของขาท่อนบนและขาท่อนล่าง และหลังจากนั้นใช้การยึดชิ้นส่วนด้วยการตอกสลักเพื่อยึดติดชิ้นส่วนเข้าด้วยกัน
 เพื่อให้มีความแข็งแรงมากกว่าการต่อแบบทั่วไป
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}[b]{0.3\linewidth}
       \includegraphics[width=\linewidth]{chapter4/images/shin.jpg}
@@ -163,7 +163,7 @@
 \subsubsection*{การขึ้นรูปชิ้นงาน}
 การขึ้นรูปชิ้นงานนนั้น ได้ใช้การขึ้นรูปชิ้นตามความสูงแนวแกน Z ดังภาพ \ref{fig:print_axis} เพื่อให้ชิ้นงานมีความสวยงามและสามารถสวมได้พอดี
 กับท่อนคาร์บอนโดยให้มีผิวสัมผัสมากที่สุด ในการยึดเกาะ\footnote{Experimental Characterization of the Mechanical Properties of 3D-Printed ABS and Polycarbonate Parts}
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=0.6\textwidth]{chapter4/images/print_axis.png}
     \caption{รูปการชิ้นรูปชิ้นงานของ 3D printer }
@@ -176,7 +176,7 @@
 และแรงที่ชิ้นงานจะได้รับนั้น จะเป็นเพียงส่วนการเชื่อมกันติดของชั้นพลาสติกเท่านั้น ซึ่ง ณ ที่นี้เส้นพลาสติกจะไม่ได้เป็นตัวรับแรงจึงทำให้
 เกิดการเปราะหักที่ง่ายกว่าดังนั้นจึงทำการออกแบบใหม่โดยการเพิ่มสันให้ชิ้นงานและเพื่มความหนาบนหน้าแปลนเชื่อมกับตัวมอเตอร์
 และทำการขึ้นรูปชิ้นงาน โดยให้ความสูงของชิ้นงานเป็นไปตามแกน X และทำการเติมเนื้อพลาสติกด้านในให้เต็ม 100\% ดังรูปที่ \ref{fig:fatiguelayer}
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}[b]{0.2\linewidth}
       \includegraphics[width=\linewidth]{chapter4/images/fatigue1.jpg}
@@ -220,7 +220,7 @@
 และนำมาเทียบกับชิ้นงานจริงเพื่อดูว่ามีความคลาดเคลื่อนด้านน้ำหนักมากน้อยขนาดไหน พบว่าค่าข้อมูลความคลาดเคลื่อนนั้นจะไม่เกินกว่าระหว่าง $\pm 1\%$ กับค่าที่แสดงบนโปรแกรม
 หลังจากนั้นทำการวิเคราะห์ผ่านโปรแกรม solidword ด้วยการวิเคราะห์ FEA ได้ผลลัพธ์ ดังนี้
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FEA1.PNG}
   \caption{รูปการวิเคราะห์แรงของข้อต่อ 1}
@@ -228,14 +228,14 @@
 \end{figure}
 
 \clearpage
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FEA2.PNG}
   \caption{รูปการวิเคราะห์แรงของข้อต่อ 2}
   \label{fig:FEAjoint2}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FEA3.PNG}
   \caption{รูปการวิเคราะห์แรงของข้อต่อ 3}
@@ -269,6 +269,7 @@
 พอสรุปได้ว่าจะไม่เกิดการแตกหักระหว่างการทำงาน ยกแว้นมีแรงกระทำจากภายนอกที่มากเกินไปจนมาผลทำให้เกิดความตึงเครียดของชิ้นงานสูง
 เกินกว่าค่าดังกล่าว  
 
+\clearpage
 \subsection{การออกแบบเท้า}
 \subsubsection{การออกแบบโครงสร้างเท้าครั้งที่ 1}
 โครงสร้างเท้านั้นได้ออกแบบให้มีลักษณะคล้ายคลึงกับรองเท้าของมนุษย์จริงและมีขนาดที่เหมาะสมกับตัวหุ่นยนต์ โดยคำนึงถึงความแข็งแรง
@@ -291,7 +292,7 @@
 ในส่วนของโครงครอบ FSR นั้นได้ออกแบบให้มีการกดโดยตรงกับหน้าสัมผัสซึ่งส่วนที่สัมผัสกับหน้าสัมผัสนั้นจะเป็นเฉพาะส่วนของ 3d print ที่ออกแบบมา
 เฉพาะการกดโดยเฉพาะ ซึ่งจะทำให้ถนอมหน้าสัมผัสได้ดีกว่า การกดจากภายนอกโดยตรงซึ่งตัวเซนเซอร์นี้จะมีความสูงออกมาจากฝ่าเท่าเป็นระยะ 5.4 มิลลิเมตร 
 โดยจะมีจำนวน 3 ตัวต่อเท้า 1 ข้าง
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{chapter4/images/FSR.PNG}
@@ -307,7 +308,7 @@
 
 \subsubsection*{การทดลองความแข็งแรงของชิ้นงานโดยวิธีการวิเคราะห์เชิงตัวเลข(Finite element)}
 จากค่าคุณสมบัติของชิ้นงานดังตาราง \ref{tab:PLA_property} นำมาวิเคราะห์ด้วยเทคนิคเชิงตัวเลขได้ผลดังนี้
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.9\textwidth]{chapter4/images/FEA4.PNG}
   \caption{รูปการวิเคราะห์แรงของเท้าหุ่นยนต์}
@@ -318,7 +319,7 @@
 หลังจากนั้นกำหนดแรงกระทำเพื่อให้เกิดแรงบิดกับชิ้นงานโดยค่าแรงที่กระทำนั้นได้มาจากการคำณวนแรงของมอเตอร์ที่ทำกับชิ้นงานข้อเท้าที่แรงบิด 10.4 นิวตัน/เมตร $(N.m)$
 ได้ผลดังตาราง \ref{tab:footstress_result}
 
-\begin{table}[ht]
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{| l | c |}
 		\hline
@@ -356,7 +357,7 @@
 \subsubsection{การออกแบบโครงสร้างเท้าครั้งที่ 2}
 ในการออกแบบครั้งนี้ได้เพิ่มขนาดของฝ่าเท้าให้ใหญ่ขึ้นเพื่อเพิ่ม support polygon ซึ่งจะเป็นผลทำให้หุ่นยนต์นั้นมีการเดินที่ง่ายขึ้น
 ในการปรับขนาดครั้งนี้ได้เพิ่มขนาดที่ปลายเท้าให้ใหญ่ขึ้น และส้นเท้ารองลงมา
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{chapter4/images/foot_new.PNG}
@@ -403,7 +404,7 @@
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.6\textwidth]{chapter4/images/FSR_graph.png}
+  \includegraphics[width=0.6\textwidth]{chapter4/images/FSR_graph.PNG}
   \caption{รูปภาพแสดงค่าที่วัดได้ของ FSR}
   \label{fig:FSR_graph}
 \end{figure}
@@ -521,4 +522,18 @@
 % \end{table}
 
 
+\clearpage
+\subsection{Engineer drawing}
 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{chapter4/images/uthai_drawing_leg.png}
+  \caption{ภาพ drawing ของขาหุ่นยนต์ฮิวมานอยด์อุทัย}
+  \label{fig:uthai_drawing_leg}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{chapter4/images/uthai_drawing_body.png}
+  \caption{ภาพ drawing ของตัวหุ่นยนต์ฮิวมานอยด์อุทัย}
+  \label{fig:uthai_drawing_body}
+\end{figure}
