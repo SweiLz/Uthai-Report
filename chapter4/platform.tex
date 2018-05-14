@@ -88,6 +88,13 @@
 มีรูปแบบแบบแผน ซึ่งผู้วิจัยได้วางระบบนี้ขึ้นมาจากประสบการณ์การทำงานของผู้วิจัยเอง รวมถึงได้ค้นคว้าหาความรู้เพิ่มเติม
 จนคิดว่าระบบนี้จะทำให้หุ่นยนต์ฮิวมานอยด์สามารถพัฒนาต่อได้ง่าย และเป็นประโยชน์ต่อผู้วิจัยท่านอื่นที่ต้องการนำระบบพื้นฐานนี้ไปใช้งาน
 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{chapter4/images/uthai_platform.png}
+	\caption{ภาพรวมระบบพื้นฐานของหุ่นยนต์อุทัย}
+	\label{fig:uthai_platform}
+\end{figure}
+
 ระบบพื้นฐานที่ผู้วิจัยออกแบบขึ้นมานั้น จะประกอบไปด้วยส่วนสำคัญอยู่ทั้งหมด 7 ส่วน คือ
 \vspace{-10pt}
 \begin{enumerate}[label=\arabic*., leftmargin=2.5cm]
@@ -97,8 +104,8 @@
     \item UTHAI-Common
     \item UTHAI-MPPC
     \item UTHAI-OPC
-    \item UTHAI-msgs
     \item UTHAI-Tools
+    \item UTHAI-msgs
 \end{enumerate}
 
 \clearpage
@@ -116,20 +123,17 @@
 \paragraph*{Wiki}
 ใช้สำหรับเก็บ Tutorial ที่เกี่ยวกับการใช้งานของหุ่นยนต์ฮิวมานอยด์อุทัย
 
-\begin{itemize}\setlength\itemsep{-0.3em}
-	\setlist{leftmargin=5.5cm}
-	\item ศึกษาเกี่ยวกับส่วนประกอบของหุ่นยนต์ฮิวมานอยด์
-	\item ศึกษาทฤษฏีที่เกี่ยวข้องกับของมนุษย์
-	\item ศึกษาทฤษฏีที่เกี่ยวข้องกับหุ่นยนต์ฮิวมานอยด์
-	\item ศึกษาความแตกต่างระหว่างมนุษย์กับหุ่นยนต์ฮิวมานอยด์
-	\item ศึกษาวิธีการและวัสดุที่ใช้ในการสร้างหุ่นยนต์
-	\item ศึกษาระบบที่ใช้ช่วยในการพัฒนาหุ่นยนต์
-	\item ศึกษาระบบที่ใช้ในการจำลองการทำงานของหุ่นยนต์
-	\item ศึกษาการใช้งาน ROS พื้นฐาน
-\end{itemize}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{chapter4/images/uthai_platform/uthai_doc.png}
+	\caption{ภาพตัวอย่าง Tutorial ใน Wiki}
+	\label{fig:uthai_platform_uthai_doc}
+\end{figure}
+
+ผู้วิจัยท่านอื่นสามารถที่จะช่วยกันเขียนและพัฒนาได้โดยการ Clone Repository แล้วทำการแก้ไขหลังจากนั้นก็ Pull request ขึ้นมาเพื่อแสดงให้ผู้วิจัยท่านอื่นเห็นด้วย
 
 
-
+\clearpage
 \subsubsection*{UTHAI-Hardware}
 ที่เก็บรายละเอียดเกี่ยวกับโครงสร้างทั้งทางกลและทางไฟฟ้า วิธีการประกอบ รายระเอียดการต่อสายไฟ
 
@@ -147,6 +151,28 @@
 \subsubsection*{UTHAI-msgs}
 เป็นที่เก็บ message ที่สร้างขึ้นมาเอง รวมไปถึง service และ action ด้วย
 
+\clearpage
 \subsubsection*{UTHAI-Tools}
-เก็บเครื่องมือที่ใช้ช่วยในการพัฒนาหุ่นยนต์
+เครื่องมือสำหรับการทำงานในฮิวมานอยด์
 
+\paragraph*{sketch-lib}
+เป็นเครื่องมือที่ใช้สำหรับเอาไว้วาดรูปเฟรมของหุ่นยนต์
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{chapter4/images/uthai_tools/basic-shapes.png}
+	\caption{ภาพตัวอย่างการวาดออฟเจ็คต่างๆ}
+	\label{fig:basic-shapes_sk}
+\end{figure}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{chapter4/images/uthai_tools/test_robot.png}
+	\caption{ภาพตัวอย่างการวาดเฟรมของแขนกล}
+	\label{fig:test-robot_sk}
+\end{figure}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{chapter4/images/uthai_tools/uthai_kinematics.png}
+	\caption{ภาพตัวอย่างการวาดเฟรมของหุ่นยนต์ฮิวมานอยด์}
+	\label{fig:uthai_kinematics_sk}
+\end{figure}
