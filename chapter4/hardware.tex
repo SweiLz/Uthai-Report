@@ -1,4 +1,4 @@
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=0.2\textwidth]{chapter4/images/UTHAI_ver_1.jpg}
     \caption{โครงสร้างหุ่นยนต์ในโปรแกรม 3 มิติ}
@@ -36,7 +36,7 @@
 เป็นจำนวน 2 ส่วนในแต่ละในก้านต่อของขาท่อนบนและขาท่อนล่าง และหลังจากนั้นใช้การยึดชิ้นส่วนด้วยการตอกสลักเพื่อยึดติดชิ้นส่วนเข้าด้วยกัน
 เพื่อให้มีความแข็งแรงมากกว่าการต่อแบบทั่วไป
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}[b]{0.3\linewidth}
       \includegraphics[width=\linewidth]{chapter4/images/shin.jpg}
@@ -163,7 +163,7 @@
 \subsubsection*{การขึ้นรูปชิ้นงาน}
 การขึ้นรูปชิ้นงานนนั้น ได้ใช้การขึ้นรูปชิ้นตามความสูงแนวแกน Z ดังภาพ \ref{fig:print_axis} เพื่อให้ชิ้นงานมีความสวยงามและสามารถสวมได้พอดี
 กับท่อนคาร์บอนโดยให้มีผิวสัมผัสมากที่สุด ในการยึดเกาะ\footnote{Experimental Characterization of the Mechanical Properties of 3D-Printed ABS and Polycarbonate Parts}
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=0.6\textwidth]{chapter4/images/print_axis.png}
     \caption{รูปการชิ้นรูปชิ้นงานของ 3D printer }
@@ -176,7 +176,7 @@
 และแรงที่ชิ้นงานจะได้รับนั้น จะเป็นเพียงส่วนการเชื่อมกันติดของชั้นพลาสติกเท่านั้น ซึ่ง ณ ที่นี้เส้นพลาสติกจะไม่ได้เป็นตัวรับแรงจึงทำให้
 เกิดการเปราะหักที่ง่ายกว่าดังนั้นจึงทำการออกแบบใหม่โดยการเพิ่มสันให้ชิ้นงานและเพื่มความหนาบนหน้าแปลนเชื่อมกับตัวมอเตอร์
 และทำการขึ้นรูปชิ้นงาน โดยให้ความสูงของชิ้นงานเป็นไปตามแกน X และทำการเติมเนื้อพลาสติกด้านในให้เต็ม 100\% ดังรูปที่ \ref{fig:fatiguelayer}
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \begin{subfigure}[b]{0.2\linewidth}
       \includegraphics[width=\linewidth]{chapter4/images/fatigue1.jpg}
@@ -218,7 +218,7 @@
 
 เมื่อทำการวิเคราะห์ผ่านโปรแกรม solidword ได้ผลลัพธ์ ดังนี้
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FEA1.PNG}
   \caption{รูปการวิเคราะห์แรงของข้อต่อ 1}
@@ -226,14 +226,14 @@
 \end{figure}
 
 \clearpage
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FEA2.PNG}
   \caption{รูปการวิเคราะห์แรงของข้อต่อ 2}
   \label{fig:FEAjoint2}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FEA3.PNG}
   \caption{รูปการวิเคราะห์แรงของข้อต่อ 3}
@@ -267,6 +267,7 @@
 พอสรุปได้ว่าจะไม่เกิดการแตกหักระหว่างการทำงาน ยกแว้นมีแรงกระทำจากภายนอกที่มากเกินไปจนมาผลทำให้เกิดความตึงเครียดของชิ้นงานสูง
 เกินกว่าค่าดังกล่าว  
 
+\clearpage
 \subsection{การออกแบบเท้า}
 ............
 \subsubsection{เซนเซอร์ตรวจจับการสัมผัสพื้น}
@@ -275,17 +276,16 @@
 เพื่อที่ใช้ในการอ่านค่า Ground Contact Sensor ของหุ่นยนต์โดยเฉพาะ โดยมีการติดต่อรูปแบบบัส RS-485 ใช้ลักษณะการติดต่อสื่อสาร(Protocol) เดียวกับตัวขับเคลื่อน Dynamixel 
 และมีการพัฒนาจาก Arduino ซึ่งให้สามารถอ่านค่าได้ทั้ง Analog และ Digital ได้ อีกทั้งรองรับการต่อ Sensor แบบ Force sensitive resistor จำนวน 4 ตัว.
 
-\clearpage
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.8\textwidth]{chapter4/images/FSR_schematic.png}
   \caption{Schematic ของวงจร Ground Contact Sensor}
   \label{fig:FSR_schematic}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{chapter4/images/complete_FSR.png}
+  \includegraphics[width=0.9\textwidth]{chapter4/images/complete_FSR.png}
   \caption{แผงวงจร Ground Contact Sensor ที่ประกอบเสร็จแล้ว}
   \label{fig:complete_FSR}
 \end{figure}
@@ -295,7 +295,7 @@
 หากไม่มีแรงเข้ามากระทำจะทำให้มีค่าความต้านทานสูง และเมื่อมีการนำเซนเซอร์นี้มาต่อกับตัวต้านทานที่มีค่าคงที่ ในรูปแบบของ Voltage Divider 
 ดังรูปที่ \ref{fig:FSR_schematic} จะทำให้สามารถอ่านค่าแรงดันไฟฟ้าที่เปลี่ยนแปลงตามแรงที่เกิดขึ้นกับหน้าสัมผัสของเซนเซอร์ FSR ได้ 
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \includegraphics[width=0.4\textwidth]{chapter4/images/FSR.jpg}
   \caption{Force Sensitive Resistor (FSR) ขนาด 0.5 นิ้ว}
@@ -306,7 +306,7 @@
 เมื่อเทียบกับเซนเซอร์ Load cell ที่มีราคาสูงและการใช้งานจำเป็นที่จะต้องมีวงจรขยายสัญญาณที่ใช้ในการอ่านค่าการบิดของวัสดุจาก 
 แต่ FSR นั้นก็มีข้อเสียเช่นกันคือ ความไม่ทนทานต่อการขีดข่วน เนื่องจากตัวเซนเซอร์ถูกทำมาจากฟิล์มพลาสติกบางๆ ซึ่งหากเกิดการขีดข่วนเกิดขึ้นแล้วอาจทำให้ฟิล์มฉีกขาดได้ 
 หากฟิล์มขาดจะทำให้ค่าความต้านทานออกมาไม่เหมือนเดิม ดังนั้นทางผู้เขียนจึงเลือกที่จะออกแบบโครงครอบสำหรับเซนเซอร์ FSR เพื่อป้องกันจากการถูกขีดข่วนจากภายนอก
-\begin{figure}[h!]
+\begin{figure}[!ht]
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{chapter4/images/FSR_cover1.png}
@@ -320,10 +320,26 @@
   \label{fig:FSR_cover}
 \end{figure}
 
+\clearpage
 \subsection{การออกแบบลำตัว}
 \subsubsection{การติดตั้งบอร์ดควบคุมและแบตเตอรี่}
 
+\clearpage
 \subsection{การออกแบบแขน}
 
 
+\clearpage
+\subsection{Engineer drawing}
 
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{chapter4/images/uthai_drawing_leg.png}
+  \caption{ภาพ drawing ของขาหุ่นยนต์ฮิวมานอยด์อุทัย}
+  \label{fig:uthai_drawing_leg}
+\end{figure}
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{chapter4/images/uthai_drawing_body.png}
+  \caption{ภาพ drawing ของตัวหุ่นยนต์ฮิวมานอยด์อุทัย}
+  \label{fig:uthai_drawing_body}
+\end{figure}

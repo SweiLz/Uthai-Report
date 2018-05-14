@@ -164,7 +164,7 @@
 	\begingroup
 	\ContentsHeader{\listfigurename}{}{\contenttopfigure}{\contenttoppage}
 	\addcontentsline{toc}{chapter}{\listfigurename}
-	\renewcommand{\baselinestretch}{-1.0} 
+	%\setlength{\baselineskip}{-10pt}
 	\@starttoc{lof}
     \endgroup
     \renewcommand{\LofHeaderContinued}{}
