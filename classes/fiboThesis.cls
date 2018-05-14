@@ -52,7 +52,7 @@
 \tikzstyle{node} = [draw, ellipse,fill=red!20, node distance=3cm]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Page layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{secnumdepth}{3} %% ความลึกของ section
-\setcounter{tocdepth}{3} %% ความลึกของสารบัญ
+\setcounter{tocdepth}{2} %% ความลึกของสารบัญ
 \geometry{left=40mm,top=30mm,bottom=20mm,right=20mm} %% Thesis Geometry
 % \geometry{left=30mm,top=30mm,bottom=20mm,right=30mm} %% Report Geometry
 
