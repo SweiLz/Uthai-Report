@@ -273,27 +273,25 @@ USB2Dynamixel เป็นอุปกรณ์สำหรับเชื่อ
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{การเชื่อมต่อมอเตอร์}
-โครงสร้างแพลตฟอร์มหุ่นยนต์ฮิวมานอยด์อุทัยจะประกอบไปด้วยขาสองข้าง 
-เพื่อทำให้เกิดองศาอิสระเป็น 12 องศาอิสระ จึงใช้ Dynamixel servos 12 ตัว มอเตอร์ทุกตัวเชื่อมต่อกันแบบเดซี่เชน (daisy chain)
-ข้างนึงของมอเตอร์ตัวแรกเชื่อมต่อกับแบตเตอร์รี่ 12V และอีกข้างต่อกับ USB2RS485
-ทั้งหมดนี้เป็นการเชื่อมต่อ Odroid เข้ากับหุ่นยนต์
-และการเชื่อมต่อกันเองระหว่างมอเตอร์ ดังรูปที่ \ref{fig:dynamixel_connect}
-
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=0.3\textwidth]{chapter2/images/PoppyHumanoid1.png}
-%     \caption{การเชื่อมต่อระหว่าง Odroid กับ Dynamixel servos}
-%     \label{fig:odroid2dynamixel}
-% \end{figure}
-
-
+\subsection{การเชื่อมต่อตัวขับเคลื่อนและตัวรับรู้}
+โครงสร้างของหุ่นยนต์ฮิวมานอยด์อุทัยจะมีขาสองข้างทำให้เกิดองศาอิสระ 12 องศาอิสระ
+จึงใช้ดิจิตอลเซอร์โวทั้งหมด 12 ตัว ดิจิตอลเซอร์โวทุกตัวเชื่อมต่อกันแบบเดซี่เชน (daisy chain) ดังรูปที่ \ref{fig:dynamixel_connect}
+ข้างนึงของมอเตอร์ตัวแรกเชื่อมต่อกับแบตเตอร์รี่ 12V และอีกข้างต่อกับ USB2RS485 เพื่อต่อไปยังตัวประมวลผระดับสูง (Odroid)
+และเซนเซอร์หน่วยวัดความเฉื่อย กับเซนเซอร์ตรวจจับหน้าสัมผัสที่พื้นเชื่อมต่อกับตัวประมวลผลระดับต่ำ (Nucleo F411RE)
+ดังรูปที่ \ref{fig:odroid2dynamixel}
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.7\textwidth]{chapter3/images/dynamixel_connect.png}
-    \caption{การเชื่อมต่อกันระหว่าง Dynamixel servos}
+    \caption{การเชื่อมต่อกันระหว่างดิจิตอลเซอร์โว}
     \label{fig:dynamixel_connect}
 \end{figure}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{chapter3/images/odroid2dynamixel.JPG}
+    \caption{การเชื่อมต่อระหว่างตัวรับรู้ ตัวประมวลผล และตัวขับเคลื่อน}
+    \label{fig:odroid2dynamixel}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
