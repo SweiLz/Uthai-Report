@@ -45,6 +45,15 @@
 % \usepackage{lipsum}
 % \usepackage{makeidx}
 \newcommand{\quotes}[1]{``#1''} %% สร้างกล่องคำพูด
+%remove space between chapter
+\usepackage{wrapfig} %% สำหรับแทรกรูปกับตัวอักษร
+\usepackage{etoolbox}
+\preto\figure{%
+  \ifnum\value{figure}=0\addtocontents{lof}{{\vskip-10pt}}\fi
+}
+\preto\table{%
+  \ifnum\value{table}=0\addtocontents{lot}{{\vskip-10pt}}\fi
+}
 
 \usetikzlibrary{shapes,automata, positioning, arrows}
 \tikzstyle{topic} = [rectangle, draw, fill=blue!20,text width=8em, text badly centered, node distance=2cm]
