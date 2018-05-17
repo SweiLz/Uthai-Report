@@ -107,6 +107,27 @@ MuRoSimF ย่อมาจากคำว่า Multi-Robot Simulation Framewor
 Darmstadt University โปรแกรมระบบจำลองนี้มีการใช้งานที่ง่าย เหมาะสำหรับหุ่นยนต์หลายประเภท เช่น
 หุ่นยนต์เคลื่อนที่ด้วยล้อ หุ่นยนต์สองขา หรือหุ่นยนต์หลายขา สามารถคำนวณพลวัตร และการขัดกันของก้านต่อต่างๆได้
 
+\clearpage
+\subsubsection*{V-Rep}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapter2/images/sim_vrep.png}
+    \caption{ผลลัพธ์จากการใช้โปรแกรม V-REP}
+    \label{fig:sim_vrep}
+\end{figure}
+VREP เป็นเครื่องมือสำหรับใช้ในการจำลองระบบหุ่นยนต์ ที่กำลังได้รับความนิยม โดยมีการเพิ่มระบบควบคุมผ่านโปรแกรมจากภายนอกเข้าไป สามารถที่จะเชื่อมต่อกับ ROS ได้และยังสามารถที่จะเขียน Script
+เพื่อควบคุมหุ่นยนต์ผ่าน API ได้ 
+
+VREP มีความเร็วในการประมวลผลที่สูง จำลองสายการผลิตในโรงงานอุตสหกรรม และเหมาะสำหรับหุ่นยนต์ที่มีการเคลื่อนที่ด้วยขา
+มีเวอร์ชัน Education ที่เป็น Open source แต่หากจะใช้เพื่อการค้าจำเป็นจะต้องมี license เพื่อที่จะใช้งาน ราคาค่อนข้างสูง
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapter2/images/sim_vrep.jpg}
+    \caption{V-REP จำลองสายการผลิต}
+    \label{fig:sim_vrep2}
+\end{figure}
+
+\clearpage
 \subsubsection*{Gazebo}
 \begin{figure}[!ht]
     \centering
