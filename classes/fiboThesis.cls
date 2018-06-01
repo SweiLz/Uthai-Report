@@ -301,6 +301,7 @@
 		\submissiontext\par
 		{ปริญญา}{\@degreeTH} สาขาวิชา{\@majorProgramTH}\par
 		{\@facultyTH}\par
+		{\@universityTH}\par
 		{ปีการศึกษา \@academicyearTH}\par
 		\vspace{0.75cm}
 		\hrule height .7pt
@@ -308,22 +309,44 @@
 	\end{center}
 
 	\begin{flushleft}
+		% \begin{tabular*}{\textwidth}{@{}p{.49\textwidth}p{.49\textwidth}@{}}
+		% 	\textbf{คณะกรรมการสอบ} & \textbf{คณะกรรมการสอบ} \\
+		% 	\vspace*{1em} & \\
+		% 	{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}{ประธานกรรมการ}} \\ 
+		% 	(\@majoradvisor) & (\@committeeOne) \\
+		% 	\vspace*{1em} & \\
+		% 	{} & {{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}{กรรมการ}} \\ 
+		% 	\ifthenelse{\equal{\@coadvisor}{}}{}{\textbf{อาจารย์ที่ปรึกษาวิทยานิพนธ์ร่วม}} & (\@committeeTwo) \\ 
+		% 	\vspace*{1em} & \\
+		% 	\ifthenelse{\equal{\@coadvisor}{}}{}{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & \ifthenelse{\equal{\@committeeThree}{}}{}{{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}{กรรมการ}} \\ 
+        %     \ifthenelse{\equal{\@coadvisor}{}}{}{(\@coadvisor)} &  \ifthenelse{\equal{\@committeeThree}{}}{}{(\@committeeThree)} \\
+		% 	\vspace*{1em} & \\
+		% \end{tabular*}
 		\begin{tabular*}{\textwidth}{@{}p{.49\textwidth}p{.49\textwidth}@{}}
-			\textbf{อาจารย์ที่ปรึกษาวิทยานิพนธ์หลัก} & \textbf{คณะกรรมการสอบ} \\
-			\vspace*{1em} & \\
-			{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}{ประธานกรรมการ}} \\ 
-			(\@majoradvisor) & (\@committeeOne) \\
-			\vspace*{1em} & \\
-			{} & {{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}{กรรมการ}} \\ 
-			\ifthenelse{\equal{\@coadvisor}{}}{}{\textbf{อาจารย์ที่ปรึกษาวิทยานิพนธ์ร่วม}} & (\@committeeTwo) \\ 
-			\vspace*{1em} & \\
-			\ifthenelse{\equal{\@coadvisor}{}}{}{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & \ifthenelse{\equal{\@committeeThree}{}}{}{{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}{กรรมการ}} \\ 
-            \ifthenelse{\equal{\@coadvisor}{}}{}{(\@coadvisor)} &  \ifthenelse{\equal{\@committeeThree}{}}{}{(\@committeeThree)} \\
-			\vspace*{1em} & \\
+			\textbf{คณะกรรมการสอบวิทยานิพนธ์} & {} \\
+			\vspace*{1em} & {}\\
+			{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {ประธานกรรมการสอบวิทยานิพนธ์} \\ 
+			(\@committeeOne) & {} \\
+			{} & {} \\
+			% \vspace*{0.5em} & \\
+			{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {อาจารย์ที่ปรึกษาวิทยานิพนธ์} \\ 
+			(\@majoradvisor) & {} \\
+			{} & {} \\% \vspace*{0.5em} & \\
+			{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {อาจารย์ที่ปรึกษาวิทยานิพนธ์} \\ 
+			(\@coadvisor) & {} \\
+			{} & {} \\% \vspace*{0.5em} & \\
+			{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {กรรมการสอบวิทยานิพนธ์} \\ 
+			(\@committeeTwo) & {} \\
+			{} & {} \\% \vspace*{0.5em} & \\
+			{\makebox[4cm]{\leavevmode\xleaders\hbox{.}\hfill\kern0pt}} & {กรรมการสอบวิทยานิพนธ์} \\ 
+			(\@committeeThree) & {} \\
+			{} & {} \\% \vspace*{0.5em} & \\
+			
 		\end{tabular*}
 	\end{flushleft}
 	\noindent
-	\vspace{7em}\\
+	% \vspace{7em}\\
+	\vfill
 	\begin{center}
 		{\large\bfseries{ลิขสิทธิ์ของ\@universityTH}\par}
 	\end{center}
